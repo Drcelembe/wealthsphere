@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WealthSphere - Converter</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>WealthSphere</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="transactions.html">Transactions</a>
+      <a href="budgets.html">Budgets</a>
+      <a href="accounts.html">Accounts</a>
+      <a href="converter.html" class="active">Converter</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Currency Converter -->
+    <section class="card col-12">
+      <h2>Currency Converter</h2>
+      <form id="converterForm">
+        <div class="row">
+          <input type="number" id="amount" placeholder="Amount" required>
+          <select id="fromCurrency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="BTC">BTC</option>
+            <option value="ETH">ETH</option>
+          </select>
+          <select id="toCurrency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="BTC">BTC</option>
+            <option value="ETH">ETH</option>
+          </select>
+          <button type="submit" class="btn primary">Convert</button>
+        </div>
+      </form>
+      <p id="convertedResult" class="kpi-value mt-2">$0.00</p>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

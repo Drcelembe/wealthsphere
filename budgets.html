@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WealthSphere - Budgets</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>WealthSphere</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="transactions.html">Transactions</a>
+      <a href="budgets.html" class="active">Budgets</a>
+      <a href="accounts.html">Accounts</a>
+      <a href="converter.html">Converter</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Add Budget -->
+    <section class="card col-12">
+      <h2>Add Budget</h2>
+      <form id="budgetForm">
+        <div class="row">
+          <input type="text" id="budgetCategory" placeholder="Category (e.g. Groceries)" required>
+          <input type="number" id="budgetAmount" step="0.01" placeholder="Amount" required>
+          <button type="submit" class="btn primary">Add</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Budget List -->
+    <section class="card col-12">
+      <h2>Budgets</h2>
+      <ul id="budgetList" class="transactions-list"></ul>
+    </section>
+
+    <!-- Category Spend Chart -->
+    <section class="card col-12">
+      <h2>Category Spend</h2>
+      <canvas id="budgetChart"></canvas>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
